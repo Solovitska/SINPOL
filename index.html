@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>СІНПОЛ — Неткані матеріали</title>
+ <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1 class="logo">СІНПОЛ</h1>
+      <div class="burger" id="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav id="nav">
+        <a href="#products">Продукція</a>
+        <a href="#advantages">Переваги</a>
+        <a href="#jobs">Вакансії</a>
+        <a href="#contacts">Контакти</a>
+      </nav>
+    </div>
+  </header>
+  <section id="products" class="section">
+  <h2> ТОВ «СІНПОЛ»</h2>
+  <p style="text-align:center; max-width:800px; margin:auto; font-size:1.1rem; color:#444;">
+    Ми виробляємо широкий асортимент нетканих матеріалів, які застосовуються у різних галузях:
+  </p>
+  <div class="grid" style="margin-top:30px;">
+    <div class="card">
+      <div class="card-content">
+        <h3>Синтепон</h3>
+        <p>Різної щільності та товщини — для меблевої, легкої та текстильної промисловості.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>Спанбонд</h3>
+        <p>Для упаковки, сільського господарства, меблевого та будівельного сектору.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>Термоповсть і технічні полотна</h3>
+        <p>Для ізоляції, шумо- та теплоізоляційних рішень.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>Наповнювачі та підкладкові матеріали</h3>
+        <p>Для одягу, матраців, м’яких меблів.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>Спеціалізовані матеріали під замовлення</h3>
+        <p>Індивідуальні технічні рішення для виробництв.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="products" class="section">
+    <h2>Продукція</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="./img/photo-2.png" alt="Подушки">
+        <div class="card-content">
+          <h3>Подушки</h3>
+          <p>Гіпоалергенні наповнювачі, різні розміри, якість OEKO-TEX.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./img/photo-3.png" alt="Ковдри">
+        <div class="card-content">
+          <h3>Ковдри</h3>
+          <p>Легкі та теплі, доступні в різних конфігураціях та дизайнах.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./img/photo-4.jpg" alt="Підкладочна тканина">
+        <div class="card-content">
+          <h3>Підкладочна тканина</h3>
+          <p>Щільність, ширина та кольори під замовлення, готовність до експорту.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:20px;">
+      <a href="#" class="btn">Завантажити каталог (PDF)</a>
+    </div>
+  </section>
+
+  <section id="advantages" class="section">
+    <h2>Переваги</h2>
+    <ul>
+      <li>Екологічність та гіпоалергенність продукції</li>
+      <li>Власне сучасне виробництво</li>
+      <li>Сертифікація OEKO-TEX, ISO</li>
+      <li>Готовність до експорту (FOB, EXW)</li>
+    </ul>
+  </section>
+
+  <section id="jobs" class="section">
+    <h2>Вакансії</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="./img/photo-5.jpg" alt="Слюсар-ремонтник">
+        <div class="card-content">
+          <h3>Механік</h3>
+          <p>Ремонт та обслуговування обладнання. Офіційне працевлаштування, соцпакет.</p>
+          <a href="#contacts" class="btn">Подати заявку</a>
+
+
+        </div>
+      </div>
+      <div class="card">
+        <img src="./img/photo_2025-07-30_16-15-01.jpg" alt="Оператор лінії">
+        <div class="card-content">
+          <h3>Оператор лінії</h3>
+          <p>Робота на сучасному обладнанні. Навчання за рахунок компанії.</p>
+          <a href="#contacts" class="btn">Подати заявку</a>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="section">
+    <h2>Контакти</h2>
+    <p style="text-align:center;"><strong>Адреса:</strong> Київська обл., Софіївська Борщагівка</p>
+    <p style="text-align:center;"><strong>Телефон:</strong> +38 097 153 26 16</p>
+
+  </section>
+
+  <footer>
+    <p>© 2025 СІНПОЛ. Всі права захищені.</p>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      burger.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+
+

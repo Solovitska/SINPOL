@@ -1,0 +1,196 @@
+
+    :root {
+      --primary: #001f3f; /* Глибокий синій */
+      --secondary: #d4af37; /* Золото */
+      --accent: #c1121f; /* Червоний */
+      --bg-light: #f5f5f5;
+      --text-dark: #222;
+      --radius: 12px;
+      --transition: 0.3s ease;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), #000c1a);
+      color: #fff;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: linear-gradient(270deg, #0057b8, #ffd700, #003f88, #ffd700);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 10s ease infinite;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  user-select: none;
+  margin: 0;
+  white-space: nowrap;
+}
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+    .header-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--secondary);
+    }
+    .burger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background: var(--secondary);
+      transition: var(--transition);
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    nav a:hover {
+      color: var(--secondary);
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      left: 50%;
+      bottom: -4px;
+      transition: var(--transition);
+    }
+    nav a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    @media(max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--primary);
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        display: none;
+        box-shadow: -2px 4px 10px rgba(0,0,0,0.3);
+      }
+      nav.active {
+        display: flex;
+      }
+      .burger {
+        display: flex;
+      }
+    }
+    .section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section h2 {
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+      border-top: 4px solid var(--secondary);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .card:hover img {
+      transform: scale(1.05);
+    }
+    .card-content {
+      padding: 20px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: var(--radius);
+      margin-top: 15px;
+      transition: background var(--transition);
+    }
+    .btn:hover {
+      background: #a00d18;
+    }
+    footer {
+      background: var(--primary);
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      border-top: 3px solid var(--secondary);
+    }
+
