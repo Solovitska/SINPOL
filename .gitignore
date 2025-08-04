@@ -4,4 +4,7 @@ node_modules
 dist
 dist-ssr
 *.local
-
+.env
+.env
+VITE_PHONE_NUMBER="+380971532616"
+VITE_EMAIL="info@alteco.com.ua"
